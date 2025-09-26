@@ -15,12 +15,34 @@
       background-color: #1a1a1a;
       font-family: 'Vazir', sans-serif;
       color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 16px;
-      overflow: hidden;
+      padding-top: 80px; /* فضای بالا برای دکمه ثابت */
+    }
+
+    .download-fixed {
+      position: fixed;
+      top: 20px;
+      right: 0;
+      left: 0;
+      z-index: 999;
+      text-align: center;
+    }
+
+    .download-btn {
+      background-color: #ff7a00;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 17px;
+      font-weight: bold;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .download-btn:hover {
+      background-color: #e86900;
     }
 
     .main-content {
@@ -31,6 +53,8 @@
       width: 100%;
       gap: 32px;
       flex-wrap: wrap;
+      margin: auto;
+      padding: 16px;
     }
 
     .main-content img {
@@ -76,29 +100,7 @@
       line-height: 2;
     }
 
-    .download-btn {
-      background-color: #ff7a00;
-      color: #fff;
-      padding: 14px 28px;
-      font-size: 17px;
-      font-weight: bold;
-      border: none;
-      border-radius: 999px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s;
-    }
-
-    .download-btn:hover {
-      background-color: #e86900;
-    }
-
     @media (max-width: 768px) {
-      body {
-        padding: 12px;
-      }
-
       .main-content {
         flex-direction: column;
         text-align: center;
@@ -139,6 +141,14 @@
 </head>
 <body>
 
+  <!-- 🔺 دکمه دانلود ثابت بالا -->
+  <div class="download-fixed">
+    <a href="https://github.com/baambmi/bame/releases/download/v1.0.0/bam.apk" class="download-btn">
+      دانلود مستقیم اپلیکیشن بام
+    </a>
+  </div>
+
+  <!-- 🔻 محتوای اصلی -->
   <div class="main-content">
     <img src="phone-banner.png" alt="اپلیکیشن بام">
     <div class="text-box">
@@ -151,11 +161,8 @@
       </p>
       <div class="warning">
         ⚠️ لطفاً با توجه به هشدارهای سامانه بام و پلیس فتا، جهت حفظ امنیت حساب خود،<br>
-        نسخه جدید و رسمی اپلیکیشن را فقط از لینک زیر دانلود نمایید.
+        نسخه جدید و رسمی اپلیکیشن را فقط از طریق دکمه بالای صفحه دانلود نمایید.
       </div>
-      <a href="https://github.com/baambmi/bame/releases/download/v1.0.0/bam.apk" class="download-btn">
-        دانلود مستقیم
-      </a>
     </div>
   </div>
 
